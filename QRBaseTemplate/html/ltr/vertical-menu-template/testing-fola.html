@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .products {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            .products td, .products th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            .products tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            .products tr:hover {
+                background-color: #ddd;
+            }
+
+            .products th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #FFA500;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+    <h2>Art Pieces Available for Sale</h2>
+
+    <table class="products">
+        <thead>
+            <tr>
+                <th>Product Image</th>
+                <th>Product Name</th>
+                <th>Product Description</th>
+                <th>Product Price</th>
+                <th>Select Product</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align:center">
+                    <img src="Driftwood_Key_Chain.jpg" alt="Flowers in Chania" width="240" height="230">
+                </td>
+                <td style="text-align:center">Driftwood Key Chain</td>
+                <td style="text-align:center">Materials are specially handpicked and made with love. The driftwood key chain is 10cm long and 1.5cm thick with a iron key ring attached to the end.Also decorated with cowries to make it look unique while giving a beach vibe.</td>
+                <td style="text-align:center">
+                    ₦
+                    <span class="product-price">10,000</span>
+                </td>
+                <td style="text-align:center">
+                    <input type="radio" class="pick-product" data-price="10000" onclick="addProduct(this)" name="DriftwoodKeyChain" value="Yes">
+                    <label for="html">Yes</label>
+                    <br>
+                    <input type="radio" class="pick-product" disabled data-price="10000" onclick="addProduct(this)" name="DriftwoodKeyChain" checked value="No">
+                    <label for="css">No</label>
+                    <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="text-align:center">
+                    <img src="Watercolor_Bookmarks.jpg" alt="Flowers in Chania" width="240" height="230">
+                </td>
+                <td style="text-align:center">Watercolor Bookmarks</td>
+                <td style="text-align:center">2X8 inches sized bookmark with white background and multi watercolor painted long brick house on thick watercolor paper. Specially painted and made with love. You don't have to loose track of your previous reading session.</td>
+                <td style="text-align:center">
+                    ₦
+                    <span class="product-price">3,000</span>
+                </td>
+                <td style="text-align:center">
+                    <input type="radio" class="pick-product" data-price="3000" onclick="addProduct(this)" name="WatercolorBookmarks" value="Yes">
+                    <label for="html">Yes</label>
+                    <br>
+                    <input type="radio" class="pick-product" disabled data-price="3000" onclick="addProduct(this)" name="WatercolorBookmarks" checked value="No">
+                    <label for="css">No</label>
+                    <br>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td style="text-align:center">
+                    <img src="Hand-painted_Shells.jpg" alt="Flowers in Chania" width="240" height="230">
+                </td>
+                <td style="text-align:center">Painted Seashells</td>
+                <td style="text-align:center"> These seashells are specially picked from the seashore and hand painted with love. Ranges from small sizes to big sizes.</td>
+                <td style="text-align:center">
+                    ₦
+                    <span class="product-price">18,000</span>
+                </td>
+                <td style="text-align:center">
+                    <input type="radio" class="pick-product" data-price="18000" onclick="addProduct(this)" name="PaintedSeashells" value="Yes">
+                    <label for="html">Yes</label>
+                    <br>
+                    <input type="radio" class="pick-product" disabled data-price="18000" onclick="addProduct(this)" name="PaintedSeashells" checked value="No">
+                    <label for="css">No</label>
+                    <br>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td style="text-align:center">
+                    <img src="Butterfly_Painting.jpg" alt="Flowers in Chania" width="240" height="230">
+                </td>
+                <td style="text-align:center">Butterflies Painting on Canvas</td>
+                <td style="text-align:center">Unframed 10X15 inches blue-gold multi-colored painting on canvas with vanish finish. Hand-painted with love to beautify your space. Your walls are never boring with this.</td>
+                <td style="text-align:center">₦ <span class="product-price">42,000</span></td>
+                <td style="text-align:center">
+                    <input type="radio" class="pick-product" data-price="42000" onclick="addProduct(this)" name="ButterfliesPaintingonCanvas" value="Yes">
+                    <label for="html">Yes</label>
+                    <br>
+                    <input type="radio" class="pick-product" disabled data-price="42000" onclick="addProduct(this)" name="ButterfliesPaintingonCanvas" checked value="No">
+                    <label for="css">No</label>
+                    <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="text-align:center">
+                    <img src="Cherry_Blossom_Tree_Painting.jpg" alt="Flowers in Chania" width="240" height="230">
+                </td>
+                <td style="text-align:center">Tree Painting on Canvas</td>
+                <td style="text-align:center">Unframed 6X12 inches white-pink cherry blossom tree painting on canvas with ash background and clean vanish finish. Hand painted with love to beautify your space. Your walls are never boring with this.</td>
+                <td style="text-align:center">₦ <span class="product-price">25,000</span></td>
+                <td style="text-align:center">
+                    <input type="radio" class="pick-product" data-price="25000" onclick="addProduct(this)" name="TreePaintingonCanvas" value="Yes">
+                    <label for="html">Yes</label>
+                    <br>
+                    <input type="radio" class="pick-product" disabled data-price="25000" onclick="addProduct(this)" name="TreePaintingonCanvas" checked value="No">
+                    <label for="css">No</label>
+                    <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="text-align:center">
+                    <img src="Handmade_Driftwood_Beach_Hut_Key_Holder.jpg" alt="Flowers in Chania" width="240" height="230">
+                </td>
+                <td style="text-align:center">Handmade Driftwood Beach Hut Key Holder</td>
+                <td style="text-align:center">Materials are specially handpicked and made with love. The handmade driftwood beach hut key holder chain is 6X15 inches in size with 5 little beach hut attached to it. Can be used to hang your keys, tote bags even coats.</td>
+                <td style="text-align:center">₦4,500</td>
+                <td style="text-align:center">
+                    <input type="radio" class="pick-product" data-price="4500" onclick="addProduct(this)" name="HandmadeDriftwoodBeachHutKeyHolder" value="Yes">
+                    <label for="html">Yes</label>
+                    <br>
+                    <input type="radio" class="pick-product" disabled data-price="4500" onclick="addProduct(this)" name="HandmadeDriftwoodBeachHutKeyHolder" checked value="No">
+                    <label for="css">No</label>
+                    <br>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table style="margin-top:20px" class="products">
+        <thead>
+            <tr style="text-align:center">
+                <th>Number of Product</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="text-align:center">
+                <td id="productCounter">0</td>
+                <td># <span id="totalAmount">0</span></td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="color:Orange;text-align:center">
+        <a href="home.html">Go to Home Page&#128512;</a>
+    </div>
+
+    <script>
+        var selectedProductCount = 0;
+        var totalPrice = 0;
+        var productPrice = 0;
+        var productPriceText = "";
+        function addProduct(d) {
+            var pickProduct = document.getElementsByClassName("pick-product");
+            for (var i = 0; i < pickProduct.length; i++) {
+                if (pickProduct[i].checked) {
+                    pickProduct[i].setAttribute("disabled", "");
+                } else {
+                    pickProduct[i].removeAttribute("disabled");
+                }
+            };
+            var thisValue = d.value;
+            productPriceText = d.getAttribute("data-price");
+            d.setAttribute("disabled", "");
+            if (thisValue == "Yes") {
+                selectedProductCount = selectedProductCount + 1;
+                productPrice = productPrice + parseFloat(productPriceText.replace(/,/g, ''));
+                document.getElementById("productCounter").innerHTML = selectedProductCount;
+                document.getElementById("totalAmount").innerHTML = numberWithCommas(productPrice);
+            } else {
+                selectedProductCount = selectedProductCount - 1;
+                productPrice = productPrice - parseFloat(productPriceText.replace(/,/g, ''));
+                document.getElementById("productCounter").innerHTML = selectedProductCount;
+                document.getElementById("totalAmount").innerHTML = numberWithCommas(productPrice);
+            }
+        }
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+    </script>
+</body>
+</html>

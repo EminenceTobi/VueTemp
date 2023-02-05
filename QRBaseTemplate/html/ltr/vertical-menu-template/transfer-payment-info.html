@@ -1,0 +1,61 @@
+﻿<!-- start: virtual account detail-->
+<section id="virtual_account_section" class="all-transfer-payment-form">
+    <div class="row">
+        <div class="col-12 text-center mb-1">
+            <h4>Transfer <span class="transaction-amount"></span></h4>
+        </div>
+        <div class="col-12 mb-2" id="">
+            <h5 class="fw-bolder text-primary d-flex justify-content-center mb-1" id="transfer_account_name">
+               Account Name
+            </h5>
+            <div class="bg-light-primary position-relative rounded p-2">
+                <h6 class="d-flex align-items-center fw-bolder mb-1">
+                    <span class="me-50 text-primary">Bank Name: <span class="text-primary p-1" id="transfer_bank_name">Test Bank</span></span>
+                </h6>
+                <h6 class="d-flex align-items-center fw-bolder mb-1">
+                    <span class="me-50 text-primary">Account Number: <span class="text-primary p-1" id="transfer_account_number">0000000000</span><a id="btn_copy_account_number" onclick="copyToClipboard(this)" data-id="0000000000" href="javascript:void()"><i data-feather='copy'></i></a></span>
+                </h6>
+            </div>
+        </div>
+        <div class="d-grid w-100 mt-1">
+            <button type="button" id="btn_transfer_sent" class="btn btn-primary btn-lg">
+                Transfer Sent
+            </button>
+        </div>
+        <div class="d-grid w-100 mt-1 text-center">
+            <a href="javascript:void()" class="text-decoration-underline fs-4 fw-bolder link-cancel-payment">
+                Cancel Payment
+            </a>
+        </div>
+    </div>
+</section>
+<!-- end: virtual account detail-->
+<!-- start: transfer confirmation wait-->
+<section id="transfer_confirmation_wait_section" class="all-transfer-payment-form d-none">
+    <div class="row">
+        <div class="col-12 text-center mb-1">
+            <h4 class="text-primary">Awaiting Confirmation... Just a sec</h4>
+        </div>
+        <div class="col-12 mt-2 mb-2">
+            <div class="progress progress-bar-primary" style="height:5px">
+                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                     role="progressbar"
+                     aria-valuenow="60"
+                     aria-valuemin="60"
+                     aria-valuemax="100"
+                     style="width: 60%"></div>
+            </div>
+        </div>
+        <div class="col-12 mb-1">
+            <div class="bg-light-primary position-relative rounded p-2">
+                <h1 class="fw-bolder fs-1 text-primary d-flex justify-content-center" id="transfer_request_time">05:00</h1>
+            </div>
+        </div>
+        <div class="d-grid w-100 mt-1">
+            <a href="javascript:void()" class="text-decoration-underline fs-4 fw-bolder link-cancel-payment">
+                Cancel Payment
+            </a>
+        </div>
+    </div>
+</section>
+<!-- end: transfer confirmation wait-->

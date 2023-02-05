@@ -1,0 +1,129 @@
+﻿<!-- start: form enter card details -->
+<section id="enter_card_info_section" class="all-card-payment-form">
+    <form id="cardPaymentValidation">
+        <div class="row">
+            <div class="col-12 text-center mb-1">
+                <h4>Pay <span class="transaction-amount"></span></h4>
+            </div>
+            <div class="col-12 text-center">
+                <h6 class="text-primary">Enter Card Details</h6>
+            </div>
+            <div class="col-12 mb-1">
+                <label class="form-label" for="transaction_card_number">Card Number</label>
+                <input id="transaction_card_number"
+                       name="transaction_card_number"
+                       class="form-control add-credit-card-mask"
+                       type="text"
+                       placeholder="0000 0000 0000 0000" />
+            </div>
+            <div class="col-6 mb-1">
+                <label class="form-label" for="transaction_card_expiry_date">Expiry Date</label>
+                <input type="text"
+                       id="transaction_card_expiry_date"
+                       name="transaction_card_expiry_date"
+                       class="form-control add-expiry-date-mask"
+                       placeholder="MM/YY" />
+            </div>
+            <div class="col-6 mb-1">
+                <label class="form-label" for="transaction_card_cvv">CVV</label>
+                <input type="text"
+                       id="transaction_card_cvv"
+                       name="transaction_card_cvv"
+                       class="form-control add-cvv-code-mask"
+                       maxlength="3"
+                       placeholder="000" />
+            </div>
+            <div class="d-grid w-100 mt-1">
+                <button id="btn_confirm_card_info" type="button" class="btn btn-primary btn-lg">
+                    Pay
+                </button>
+            </div>
+            <div class="d-grid w-100 mt-1 text-center">
+                <a href="javascript:void()" class="text-decoration-underline fs-4 fw-bolder link-cancel-payment">
+                    Cancel Payment
+                </a>
+            </div>
+        </div>
+    </form>
+</section>
+<!-- end: form enter card details -->
+<!-- start: form enter card pin -->
+<section id="enter_card_pin_section" class="all-card-payment-form d-none">
+    <form id="cardPinValidation">
+        <div class="row">
+            <div class="col-12 text-center mb-1">
+                <h4>Pay <span class="transaction-amount"></span></h4>
+            </div>
+            <div class="col-12 text-center">
+                <h6 class="text-primary">Enter PIN</h6>
+            </div>
+            <div class="col-12 mb-1">
+                <div class="auth-input-wrapper d-flex align-items-center justify-content-between">
+                    <input type="text"
+                           class="form-control card-payment-pin-input auth-input height-50 text-center numeral-mask mx-25 mb-1"
+                           maxlength="1"
+                           name="card_pin"
+                           autofocus="" />
+
+                    <input type="text"
+                           class="form-control card-payment-pin-input auth-input height-50 text-center numeral-mask mx-25 mb-1"
+                             name="card_pin"
+                           maxlength="1" />
+
+                    <input type="text"
+                           class="form-control card-payment-pin-input auth-input height-50 text-center numeral-mask mx-25 mb-1"
+                             name="card_pin"
+                           maxlength="1" />
+
+                    <input type="text"
+                           class="form-control card-payment-pin-input auth-input height-50 text-center numeral-mask mx-25 mb-1"
+                             name="card_pin"
+                           maxlength="1" />
+                </div>
+            </div>
+            <div class="d-grid w-100 mt-1">
+                <button type="button" class="btn btn-primary btn-lg" id="btn_confirm_transaction_pin">
+                    Complete Payment
+                </button>
+            </div>
+            <div class="d-grid w-100 mt-1 text-center">
+                <a href="javascript:void()" class="text-decoration-underline fs-4 fw-bolder link-cancel-payment">
+                    Cancel Payment
+                </a>
+            </div>
+        </div>
+    </form>
+</section>
+<!-- end: form enter card pin -->
+<!-- start:  form otp sent -->
+<section id="enter_transaction_otp_section" class="all-card-payment-form d-none">
+    <form id="paymentOtpValidation">
+        <div class="row">
+            <div class="col-12 text-center mb-1">
+                <h4>OTP sent to <span class="customer-phone">08100848422</span></h4>
+            </div>
+            <div class="col-12 text-center">
+                <h6 class="text-primary">Enter OTP</h6>
+            </div>
+            <div class="col-12 mb-1">
+                <input id="transaction_otp"
+                       name="transaction_otp"
+                       class="form-control"
+                       type="text"
+                       maxlength="6"
+                       placeholder="123456" />
+            </div>
+            <div class="d-grid w-100 mt-1">
+                <button class="btn btn-primary btn-lg" id="btn_confirm_transaction_otp">
+                    Confirm OTP
+                </button>
+            </div>
+            <div class="d-grid w-100 mt-1 text-center">
+                <a href="javascript:void()" class="text-decoration-underline fs-4 fw-bolder link-cancel-payment">
+                    Cancel Payment
+                </a>
+            </div>
+        </div>
+    </form>
+</section>
+<!-- end: form otp sent-->
